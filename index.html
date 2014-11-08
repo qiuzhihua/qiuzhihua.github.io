@@ -67,6 +67,122 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-demo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/08/demo/" class="article-date">
+  <time datetime="2014-11-08T07:59:06.000Z" itemprop="datePublished">Nov 8 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/08/demo/">Slider</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@interface QYViewController ()</p>
+<p>@property (nonatomic,strong)UIImageView <em>image;<br>@property (nonatomic) UISlider </em>slider;<br>@property (nonatomic) UILabel <em>imageNo;<br>@property (nonatomic) UISlider </em>slider1;<br>@property (nonatomic) UISwitch *swith;</p>
+<p>@end</p>
+<p>@implementation QYViewController</p>
+<ul>
+<li>(void)viewDidLoad<br>{<br>  [super viewDidLoad];</li>
+</ul>
+<pre><code>_slider = [[UISlider alloc] initWithFrame:CGRectMake( <span class="number">20</span>, <span class="number">430</span>, <span class="number">280</span>, <span class="number">30</span>)];
+_slider<span class="variable">.minimumValue</span> = <span class="number">1</span>;
+_slider<span class="variable">.maximumValue</span> = <span class="number">9</span>;
+[_slider addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(touch:) forControlEvents:UIControlEventValueChanged];
+[<span class="keyword">self</span><span class="variable">.view</span> addSubview:_slider];
+
+
+<span class="built_in">UIButton</span> *button = [[<span class="built_in">UIButton</span> alloc] initWithFrame:CGRectMake(<span class="number">0</span>, <span class="number">30</span>, <span class="number">60</span>, <span class="number">30</span>)];
+button<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> greenColor];
+[button setTitle:<span class="string">@"设置"</span> forState:UIControlStateNormal];
+[button addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(click:) forControlEvents:UIControlEventTouchDown];
+[<span class="keyword">self</span><span class="variable">.view</span> addSubview:button];
+
+_image = [[<span class="built_in">UIImageView</span> alloc] initWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"唯美14.jpg"</span>]];
+_image<span class="variable">.frame</span> = CGRectMake(<span class="number">0</span>, <span class="number">0</span>, <span class="number">320</span>, <span class="number">480</span>);
+[<span class="keyword">self</span><span class="variable">.view</span> addSubview:_image];
+</code></pre><p>}</p>
+<p>-(void)touch:(UISlider *)slider<br>{</p>
+<pre><code> <span class="keyword">int</span> aa = floor(_slider<span class="variable">.value</span>);
+ <span class="built_in">NSString</span> *imageName = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"唯美%d.png"</span>,aa];
+_image<span class="variable">.image</span> = [<span class="built_in">UIImage</span> imageNamed:imageName];
+
+_image<span class="variable">.frame</span> = CGRectMake(<span class="number">50</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>);
+
+[<span class="keyword">self</span><span class="variable">.view</span> addSubview:_image];
+
+
+<span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc] initWithFrame:CGRectMake(<span class="number">100</span>, <span class="number">50</span>, <span class="number">90</span>, <span class="number">30</span>)];
+label<span class="variable">.text</span> = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%.f/9"</span>,_slider<span class="variable">.value</span> ];
+label<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> greenColor];
+label<span class="variable">.textAlignment</span> = NSTextAlignmentCenter;
+[<span class="keyword">self</span><span class="variable">.view</span> addSubview:label];
+
+<span class="built_in">NSLog</span>(<span class="string">@"%f"</span>,_slider<span class="variable">.value</span>);
+</code></pre><p>}</p>
+<p>-(void)click:(UIButton *)button<br>{</p>
+<pre><code>/*
+<span class="class">UIActionSheet</span> *action = [[<span class="class">UIActionSheet</span> alloc] <span class="method">initWithTitle:</span>@<span class="comment">"是否收藏"</span> <span class="method">delegate:</span><span class="keyword">self</span> <span class="method">cancelButtonTitle:</span>@<span class="comment">"取消"</span> <span class="method">destructiveButtonTitle:</span>@<span class="comment">"喜欢"</span> <span class="method">otherButtonTitles:</span>@<span class="comment">"确认"</span>, <span class="keyword">nil</span>];
+
+[action <span class="method">showInView:</span><span class="keyword">self</span>.view];
+*/
+
+
+
+<span class="class">UIImageView</span> *view1 = [[<span class="class">UIImageView</span> alloc] <span class="method">initWithFrame:</span><span class="class">CGRectMake</span>(<span class="number">0</span>, <span class="number">400</span>, <span class="number">320</span>, <span class="number">80</span>)];
+view1.backgroundColor = [<span class="class">UIColor</span> brownColor];
+[<span class="keyword">self</span>.view <span class="method">addSubview:</span>view1];
+</code></pre><h1 id="pragma_mark_控制图片缩放">pragma mark 控制图片缩放</h1>
+<pre><code><span class="setting">_slider1 = <span class="value">[[UISlider alloc] initWithFrame:CGRectMake( <span class="number">70</span>, <span class="number">440</span>, <span class="number">230</span>, <span class="number">30</span>)];</span></span>
+<span class="title">[_slider1 addTarget:self action:@selector(change) forControlEvents:UIControlEventValueChanged]</span><span class="comment">;</span>
+<span class="title">[self.view addSubview:_slider1]</span><span class="comment">;</span>
+</code></pre><h1 id="pragma_mark_设置开关">pragma mark 设置开关</h1>
+<pre><code><span class="attribute">_swith </span>=<span class="string"> [[UISwitch alloc] initWithFrame:CGRectMake(100, 400, 40, 20)];</span>
+</code></pre><p>   // _swith.backgroundColor = [UIColor blueColor];<br>    [_swith addTarget:self action:@selector(swif) forControlEvents:UIControlEventValueChanged];<br>    [self.view addSubview:_swith];</p>
+<h1 id="pragma_mark_设置Label">pragma mark 设置Label</h1>
+<pre><code><span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc] initWithFrame:CGRectMake(<span class="number">20</span>, <span class="number">400</span>, <span class="number">50</span>, <span class="number">30</span>)];
+label<span class="variable">.text</span> = <span class="string">@"情景模式"</span>;
+label<span class="variable">.textColor</span> = [<span class="built_in">UIColor</span> blackColor];
+label<span class="variable">.adjustsFontSizeToFitWidth</span> = <span class="literal">YES</span>;
+[<span class="keyword">self</span><span class="variable">.view</span> addSubview:label];
+
+<span class="built_in">UILabel</span> *label1 = [[<span class="built_in">UILabel</span> alloc] initWithFrame:CGRectMake(<span class="number">20</span>, <span class="number">440</span>, <span class="number">50</span>, <span class="number">30</span>)];
+label1<span class="variable">.text</span> = <span class="string">@"图片缩放"</span>;
+label1<span class="variable">.textColor</span> = [<span class="built_in">UIColor</span> blackColor];
+label1<span class="variable">.adjustsFontSizeToFitWidth</span> = <span class="literal">YES</span>;
+[<span class="keyword">self</span><span class="variable">.view</span> addSubview:label1];
+</code></pre><p>}</p>
+<p>-(void)change<br>{<br>    //transform是NSAffineTransform的类方法，NSAffineTransform类主要实现图形的缩放，旋转和平移操作。在Xcode10.4之后，NSAffineTransform类已经被分割为基础工具包和应用开发框架。</p>
+<pre><code>_image.transform = CGAffineTransformMakeScale(_slider1.<span class="keyword">value</span>, _slider1.<span class="keyword">value</span>);
+</code></pre><p>}</p>
+<p>-(void)swif<br>{<br>    if (_swith.on) {<br>        self.view.backgroundColor = [UIColor darkGrayColor];<br>    } else{<br>        self.view.backgroundColor = [UIColor whiteColor];<br>    }</p>
+<p>}</p>
+<p>@end</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/11/08/demo/" data-id="wa9p3u7csw9wpkdu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-写给南方" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/11/05/写给南方/" class="article-date">
@@ -399,60 +515,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/04/hello-world/" class="article-date">
-  <time datetime="2014-10-04T04:08:14.000Z" itemprop="datePublished">Oct 4 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/04/hello-world/" data-id="m6exy0yn3z1rv8hj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
@@ -482,7 +548,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">8</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -492,6 +558,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2014/11/08/demo/">Slider</a>
+          </li>
         
           <li>
             <a href="/2014/11/05/写给南方/">(no title)</a>
@@ -507,10 +577,6 @@
         
           <li>
             <a href="/2014/10/21/便签纸上的爱情/">便签纸上的爱情</a>
-          </li>
-        
-          <li>
-            <a href="/2014/10/20/龙哥/">(no title)</a>
           </li>
         
       </ul>
