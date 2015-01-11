@@ -1,623 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>qiudushu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="qiudushu">
-<meta property="og:url" content="http://yoursite.com/">
-<meta property="og:site_name" content="qiudushu">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="qiudushu">
-<meta name="twitter:description">
 
-  
-    <link rel="alternative" href="/atom.xml" title="qiudushu" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Qiuzhihua.GitHub.io : knowledge">
 
-  
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-</head>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">qiudushu</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">xiating,you are my best .</a>
-        </h2>
-      
+    <title>Qiuzhihua.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/qiuzhihua">View on GitHub</a>
+
+          <h1 id="project_title">Qiuzhihua.GitHub.io</h1>
+          <h2 id="project_tagline">knowledge</h2>
+
+        </header>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-demo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/11/08/demo/" class="article-date">
-  <time datetime="2014-11-08T07:59:06.000Z" itemprop="datePublished">Nov 8 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/08/demo/">Slider</a>
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>@interface QYViewController ()</p>
-<p>@property (nonatomic,strong)UIImageView <em>image;<br>@property (nonatomic) UISlider </em>slider;<br>@property (nonatomic) UILabel <em>imageNo;<br>@property (nonatomic) UISlider </em>slider1;<br>@property (nonatomic) UISwitch *swith;</p>
-<p>@end</p>
-<p>@implementation QYViewController</p>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>title: qiudushu
+date: 2015-01-11 17:48:04</p>
+
+<h2>
+<a id="tagslabletextheight" class="anchor" href="#tagslabletextheight" aria-hidden="true"><span class="octicon octicon-link"></span></a>tags:lableTextHeight</h2>
+
+<p>static UILabel *lable;</p>
+
+<p><a href="https://github.com/implementation" class="user-mention">@implementation</a> lableTextHeight</p>
+
 <ul>
-<li>(void)viewDidLoad<br>{<br>  [super viewDidLoad];</li>
+<li>
+<p>(void)initialize
+{
+if(self == [lableTextHeight class]){
+    //专门计算微博内容高度的方法
+    NSInteger defaultWidth = [[UIScreen mainScreen] bounds].size.width -16;
+    lable = [[UILabel alloc] init];
+    lable.lineBreakMode = NSLineBreakByTruncatingTail;
+    lable.numberOfLines = 0;
+    lable.translatesAutoresizingMaskIntoConstraints = NO;</p>
+
+<pre><code>NSLayoutConstraint  *constraint = [NSLayoutConstraint constraintWithItem:lable attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:defaultWidth];
+[lable addConstraint:constraint];
+</code></pre>
+
+<p>}
+}</p>
+</li>
 </ul>
-<pre><code>_slider = [[UISlider alloc] initWithFrame:CGRectMake( <span class="number">20</span>, <span class="number">430</span>, <span class="number">280</span>, <span class="number">30</span>)];
-_slider<span class="variable">.minimumValue</span> = <span class="number">1</span>;
-_slider<span class="variable">.maximumValue</span> = <span class="number">9</span>;
-[_slider addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(touch:) forControlEvents:UIControlEventValueChanged];
-[<span class="keyword">self</span><span class="variable">.view</span> addSubview:_slider];
 
+<p>+(CGFloat)textHeightWith:(NSString *)string FontSize:(NSInteger)fontSize width:(float)width
+{
+    lable.font = [UIFont systemFontOfSize:fontSize];
+    NSArray *constraints;
+    if (width != 0 &amp;&amp; lable.bounds.size.width != width) {
+        constraints  = lable.constraints;//约束
+        [lable removeConstraints:lable.constraints];</p>
 
-<span class="built_in">UIButton</span> *button = [[<span class="built_in">UIButton</span> alloc] initWithFrame:CGRectMake(<span class="number">0</span>, <span class="number">30</span>, <span class="number">60</span>, <span class="number">30</span>)];
-button<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> greenColor];
-[button setTitle:<span class="string">@"设置"</span> forState:UIControlStateNormal];
-[button addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(click:) forControlEvents:UIControlEventTouchDown];
-[<span class="keyword">self</span><span class="variable">.view</span> addSubview:button];
+<pre><code>    NSLayoutConstraint *contraint = [NSLayoutConstraint constraintWithItem:lable attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:width];
 
-_image = [[<span class="built_in">UIImageView</span> alloc] initWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"唯美14.jpg"</span>]];
-_image<span class="variable">.frame</span> = CGRectMake(<span class="number">0</span>, <span class="number">0</span>, <span class="number">320</span>, <span class="number">480</span>);
-[<span class="keyword">self</span><span class="variable">.view</span> addSubview:_image];
-</code></pre><p>}</p>
-<p>-(void)touch:(UISlider *)slider<br>{</p>
-<pre><code> <span class="keyword">int</span> aa = floor(_slider<span class="variable">.value</span>);
- <span class="built_in">NSString</span> *imageName = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"唯美%d.png"</span>,aa];
-_image<span class="variable">.image</span> = [<span class="built_in">UIImage</span> imageNamed:imageName];
+    [lable addConstraint:contraint];
+}
+lable.text = string;
 
-_image<span class="variable">.frame</span> = CGRectMake(<span class="number">50</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>);
+CGSize size = [lable systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+if (constraints) {
+    [lable removeConstraints:lable.constraints];
+    [lable addConstraints:constraints];
+}
+return size.height;
+</code></pre>
 
-[<span class="keyword">self</span><span class="variable">.view</span> addSubview:_image];
-
-
-<span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc] initWithFrame:CGRectMake(<span class="number">100</span>, <span class="number">50</span>, <span class="number">90</span>, <span class="number">30</span>)];
-label<span class="variable">.text</span> = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%.f/9"</span>,_slider<span class="variable">.value</span> ];
-label<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> greenColor];
-label<span class="variable">.textAlignment</span> = NSTextAlignmentCenter;
-[<span class="keyword">self</span><span class="variable">.view</span> addSubview:label];
-
-<span class="built_in">NSLog</span>(<span class="string">@"%f"</span>,_slider<span class="variable">.value</span>);
-</code></pre><p>}</p>
-<p>-(void)click:(UIButton *)button<br>{</p>
-<pre><code>/*
-<span class="class">UIActionSheet</span> *action = [[<span class="class">UIActionSheet</span> alloc] <span class="method">initWithTitle:</span>@<span class="comment">"是否收藏"</span> <span class="method">delegate:</span><span class="keyword">self</span> <span class="method">cancelButtonTitle:</span>@<span class="comment">"取消"</span> <span class="method">destructiveButtonTitle:</span>@<span class="comment">"喜欢"</span> <span class="method">otherButtonTitles:</span>@<span class="comment">"确认"</span>, <span class="keyword">nil</span>];
-
-[action <span class="method">showInView:</span><span class="keyword">self</span>.view];
-*/
-
-
-
-<span class="class">UIImageView</span> *view1 = [[<span class="class">UIImageView</span> alloc] <span class="method">initWithFrame:</span><span class="class">CGRectMake</span>(<span class="number">0</span>, <span class="number">400</span>, <span class="number">320</span>, <span class="number">80</span>)];
-view1.backgroundColor = [<span class="class">UIColor</span> brownColor];
-[<span class="keyword">self</span>.view <span class="method">addSubview:</span>view1];
-</code></pre><h1 id="pragma_mark_控制图片缩放">pragma mark 控制图片缩放</h1>
-<pre><code><span class="setting">_slider1 = <span class="value">[[UISlider alloc] initWithFrame:CGRectMake( <span class="number">70</span>, <span class="number">440</span>, <span class="number">230</span>, <span class="number">30</span>)];</span></span>
-<span class="title">[_slider1 addTarget:self action:@selector(change) forControlEvents:UIControlEventValueChanged]</span><span class="comment">;</span>
-<span class="title">[self.view addSubview:_slider1]</span><span class="comment">;</span>
-</code></pre><h1 id="pragma_mark_设置开关">pragma mark 设置开关</h1>
-<pre><code><span class="attribute">_swith </span>=<span class="string"> [[UISwitch alloc] initWithFrame:CGRectMake(100, 400, 40, 20)];</span>
-</code></pre><p>   // _swith.backgroundColor = [UIColor blueColor];<br>    [_swith addTarget:self action:@selector(swif) forControlEvents:UIControlEventValueChanged];<br>    [self.view addSubview:_swith];</p>
-<h1 id="pragma_mark_设置Label">pragma mark 设置Label</h1>
-<pre><code><span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc] initWithFrame:CGRectMake(<span class="number">20</span>, <span class="number">400</span>, <span class="number">50</span>, <span class="number">30</span>)];
-label<span class="variable">.text</span> = <span class="string">@"情景模式"</span>;
-label<span class="variable">.textColor</span> = [<span class="built_in">UIColor</span> blackColor];
-label<span class="variable">.adjustsFontSizeToFitWidth</span> = <span class="literal">YES</span>;
-[<span class="keyword">self</span><span class="variable">.view</span> addSubview:label];
-
-<span class="built_in">UILabel</span> *label1 = [[<span class="built_in">UILabel</span> alloc] initWithFrame:CGRectMake(<span class="number">20</span>, <span class="number">440</span>, <span class="number">50</span>, <span class="number">30</span>)];
-label1<span class="variable">.text</span> = <span class="string">@"图片缩放"</span>;
-label1<span class="variable">.textColor</span> = [<span class="built_in">UIColor</span> blackColor];
-label1<span class="variable">.adjustsFontSizeToFitWidth</span> = <span class="literal">YES</span>;
-[<span class="keyword">self</span><span class="variable">.view</span> addSubview:label1];
-</code></pre><p>}</p>
-<p>-(void)change<br>{<br>    //transform是NSAffineTransform的类方法，NSAffineTransform类主要实现图形的缩放，旋转和平移操作。在Xcode10.4之后，NSAffineTransform类已经被分割为基础工具包和应用开发框架。</p>
-<pre><code>_image.transform = CGAffineTransformMakeScale(_slider1.<span class="keyword">value</span>, _slider1.<span class="keyword">value</span>);
-</code></pre><p>}</p>
-<p>-(void)swif<br>{<br>    if (_swith.on) {<br>        self.view.backgroundColor = [UIColor darkGrayColor];<br>    } else{<br>        self.view.backgroundColor = [UIColor whiteColor];<br>    }</p>
 <p>}</p>
-<p>@end</p>
-
-      
+      </section>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/11/08/demo/" data-id="wa9p3u7csw9wpkdu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-    <article id="post-写给南方" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/11/05/写给南方/" class="article-date">
-  <time datetime="2014-11-05T12:14:35.000Z" itemprop="datePublished">Nov 5 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>title: 写给南方<br>date: 2014-11-05 20:13:21</p>
-<h2 id="tags:写给南方">tags:写给南方</h2>
-<p>之前答应写点东西只是关于她，可一直搁置一旁不知如何打开文档敲下一字一句来。<br>虽说也写过也算不少的文字却大都是关于远方关于那个可望而不可及的信仰。<br>好吧我错了我又在她面前提起另外一个她。</p>
-<p>从何说起。<br>再纯粹的情感也难抵时间，再童真的幻想也难抵现实，再扯淡的青春也会回过头不忍直视。<br>每个人都有每个人的执拗，执拗到日渐觉得自己入魔却还要自欺欺人的相信那是信仰。<br>那是不能忍受一丁点的不愉快一丁点的瑕疵。<br>一个有着偏执狂的洁癖者要是在自己的视线里瞅到一根头发便如五雷轰顶如鲠在喉。<br>世界上最好的就是得不到的，我从未想过要得到的可我也不希望别人得到。<br>何况我还是个小心眼，最要命的我是个男人。<br>换句话说我是个要命的带着偏执的稍微带点洁癖的小心眼男人。</p>
-<p>“你不是要写点关于她的文字”未未问。<br>“对啊”<br>“哪你怎么都在写着自己”<br>“只有让她认清真实的我才会知道她和我之间为什么存在着疙瘩啊”<br>“好牛逼的感觉”<br>。。。。</p>
-<p>为什么我可以和她在一起玩还可以生气无外乎我喜欢她。<br>像朋友般的肆无忌惮的近乎忘记了她的性别。<br>她有大姨妈我没有她不可以打飞机我可以我却不愿意。<br>还有的就是我是个好人也是个做不出坏事来的坏人，而她单纯的就是好人。</p>
-<p>我常跟一发小一块玩，每天就跟着他四处游荡。<br>他就带着我去好玩的地方看好看的风景吃好吃的食物瞅好看的菇凉。<br>最重要的是我从他身上看到所谓的情谊。<br>可突然有一天他不带我玩了只是那一次没有带我玩而已。<br>我就在心里嘀咕：草，有什么了不起，不带我玩就不带我玩。<br>后来恢复以往他带着我去好玩的地方看好看的风景吃好吃的食物瞅好看的菇凉。<br>我就在心里嘀咕：草，那又怎样。<br>无论什么只要他要只要我有无论什么劳资都不给他。</p>
-<p>“你听明白了吗”我问。<br>“明白倒是明白，跟她有什么关系”<br>“她有一次就不带我玩来了尽管后来她后来继续带我玩，我就心里嘀咕：晚了”<br>“好牛逼的感觉”<br>。。。。<br>“怎么不带你玩了”<br>“她谈恋爱了”<br>“你又不爱她追她娶她回家做小媳妇还不让人家谈恋爱”<br>“也是哈，我没想得到她可我也不想别人得到啊”<br>“有病”<br>“她是我的好朋友至少我这么认为尽管我承认我对她不够好”<br>“那又怎样”<br>“我见不得她有着一丁点的不愉快一丁点的瑕疵”<br>“。。。。你就扯淡吧你”<br>。。。。。</p>
-<p>渔是我发小中最好看的菇凉。<br>贱人张和新朋打小就都喜欢她可都没追上就连手到后来都不让牵。<br>可万金油跟她玩的最要好，彼此间可以谈很私密的事情甚至都不让我们知道。<br>可她愿意告诉我只要我问，我要什么她就给只要我要。<br>如果过分了点她就不可理喻的生气甚至在很长一段时间都不搭理我甚至说我变态。<br>“你要过什么”<br>“我说还没有美女抱过我她就过来抱我一下，我说我没牵过女生的手她就拉起我的手”<br>“那你要过什么过分的”<br>“有次吃饭我说我还没亲过女生的嘴我想尝尝味道毕竟杨老师万金油他们都是快要结婚的人了当然都知道”<br>“逗比”<br>“她说我变态然后很长一段时间都不理我就连那一年的生日都没打电话给我，不过那年冬天她送给我条围巾”<br>“等等，这跟她有关系”<br>“我总认为我们不够好”<br>“你丫真特么的矫情”<br>“比方说我会跟她置气然后很长一段时间说话都带着刺，烙上的疤怎么磨皮都还是会有痕迹”<br>“绕这么远不就是说你小心眼，不就是她跟人恋爱了你心里有疙瘩”<br>“草你真了解我”<br>“了解你妹，你丫就是逗比”<br>。。。。</p>
-<p>杨老师是我的性启蒙老师，他谈过的每一个女友都近乎显摆的前来告诉我。<br>如今遇上了个菇凉好上了也有几年光景竟也没分开，说是不出一年就结婚。<br>可我每次都凑近前去告诉他我真心觉得杨老师应该找到更好的尽管眼前的这个已经很不错了。</p>
-<p>前一段她告诉我男友变成了前男友我当时就觉得该，真特么的该，早就该分了。<br>“哎你说你脑子进水了还是脑子有病”<br>“你不知道，当时我就特开心，因为她终于恢复了单身”<br>“关你屁事”<br>“可下一秒我就难过，失恋毕竟是件难过的事尽管我没经历过”<br>“你应该高兴才对毕竟人家离开了人渣”<br>“可恋爱这么久不可能没牵过人家的手亲过人家的嘴到后来还不是自己的男人”<br>。。。。。<br>好牛逼的感觉。。。。</p>
-<p>我会承诺的很多然后还要天真的履行即使很多许下的诺言别人都已记不起却烙在我心里。<br>我实现的很少可我却从没有放弃过也从未忘记也从未想过让别人知道。<br>我们会肩并肩的走着也会背对背的道别离开，我会去有她在城市看看那里的风景幻想她在的模样。<br>我会为她掉眼泪，每一滴我都觉得浪费还是不争气的落下来。<br>我会很高兴认识她这么久有过开心和不愉快，唯一庆幸的是我没有对她许过诺言。<br>诺言会成为累赘会海枯石烂要是实现不了还会撕心裂肺还会成为遗憾。<br>庆幸的是我答应的我都一一实现，也许多年以后回想起来瞬间自有答案。</p>
-<p>我知道自己喜欢她。<br>但我不知道自己将来在哪里。<br>因为我知道，无论哪里，她都不会带我去。<br>但我知道，无论我在哪里，只要她来我就去接她带她去好玩的地方看好看的风景吃好吃的东西。</p>
-<pre><code>                                                    写给南方
-</code></pre>
-      
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/11/05/写给南方/" data-id="plzha50sumnhnoy9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-    <article id="post-离言-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/11/05/离言-1/" class="article-date">
-  <time datetime="2014-11-05T11:53:20.000Z" itemprop="datePublished">Nov 5 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>title: 离言<br>date: 2014-11-05 19:51:24</p>
-<h2 id="tags:文艺范">tags:文艺范</h2>
-<h2 id="离言">离言</h2>
-<p>之前答应写点东西只是关于她，可一直搁置一旁不知如何打开文档敲下一字一句来。<br>虽说也写过也算不少的文字却大都是关于远方关于那个可望而不可及的信仰。<br>好吧我错了我又在她面前提起另外一个她。</p>
-<p>从何说起。<br>再纯粹的情感也难抵时间，再童真的幻想也难抵现实，再扯淡的青春也会回过头不忍直视。<br>每个人都有每个人的执拗，执拗到日渐觉得自己入魔却还要自欺欺人的相信那是信仰。<br>那是不能忍受一丁点的不愉快一丁点的瑕疵。<br>一个有着偏执狂的洁癖者要是在自己的视线里瞅到一根头发便如五雷轰顶如鲠在喉。<br>世界上最好的就是得不到的，我从未想过要得到的可我也不希望别人得到。<br>何况我还是个小心眼，最要命的我是个男人。<br>换句话说我是个要命的带着偏执的稍微带点洁癖的小心眼男人。</p>
-<p>“你不是要写点关于她的文字”未未问。<br>“对啊”<br>“哪你怎么都在写着自己”<br>“只有让她认清真实的我才会知道她和我之间为什么存在着疙瘩啊”<br>“好牛逼的感觉”<br>。。。。</p>
-<p>为什么我可以和她在一起玩还可以生气无外乎我喜欢她。<br>像朋友般的肆无忌惮的近乎忘记了她的性别。<br>她有大姨妈我没有她不可以打飞机我可以我却不愿意。<br>还有的就是我是个好人也是个做不出坏事来的坏人，而她单纯的就是好人。</p>
-<p>我常跟一发小一块玩，每天就跟着他四处游荡。<br>他就带着我去好玩的地方看好看的风景吃好吃的食物瞅好看的菇凉。<br>最重要的是我从他身上看到所谓的情谊。<br>可突然有一天他不带我玩了只是那一次没有带我玩而已。<br>我就在心里嘀咕：草，有什么了不起，不带我玩就不带我玩。<br>后来恢复以往他带着我去好玩的地方看好看的风景吃好吃的食物瞅好看的菇凉。<br>我就在心里嘀咕：草，那又怎样。<br>无论什么只要他要只要我有无论什么劳资都不给他。</p>
-<p>“你听明白了吗”我问。<br>“明白倒是明白，跟她有什么关系”<br>“她有一次就不带我玩来了尽管后来她后来继续带我玩，我就心里嘀咕：晚了”<br>“好牛逼的感觉”<br>。。。。<br>“怎么不带你玩了”<br>“她谈恋爱了”<br>“你又不爱她追她娶她回家做小媳妇还不让人家谈恋爱”<br>“也是哈，我没想得到她可我也不想别人得到啊”<br>“有病”<br>“她是我的好朋友至少我这么认为尽管我承认我对她不够好”<br>“那又怎样”<br>“我见不得她有着一丁点的不愉快一丁点的瑕疵”<br>“。。。。你就扯淡吧你”<br>。。。。。</p>
-<p>渔是我发小中最好看的菇凉。<br>贱人张和新朋打小就都喜欢她可都没追上就连手到后来都不让牵。<br>可万金油跟她玩的最要好，彼此间可以谈很私密的事情甚至都不让我们知道。<br>可她愿意告诉我只要我问，我要什么她就给只要我要。<br>如果过分了点她就不可理喻的生气甚至在很长一段时间都不搭理我甚至说我变态。<br>“你要过什么”<br>“我说还没有美女抱过我她就过来抱我一下，我说我没牵过女生的手她就拉起我的手”<br>“那你要过什么过分的”<br>“有次吃饭我说我还没亲过女生的嘴我想尝尝味道毕竟杨老师万金油他们都是快要结婚的人了当然都知道”<br>“逗比”<br>“她说我变态然后很长一段时间都不理我就连那一年的生日都没打电话给我，不过那年冬天她送给我条围巾”<br>“等等，这跟她有关系”<br>“我总认为我们不够好”<br>“你丫真特么的矫情”<br>“比方说我会跟她置气然后很长一段时间说话都带着刺，烙上的疤怎么磨皮都还是会有痕迹”<br>“绕这么远不就是说你小心眼，不就是她跟人恋爱了你心里有疙瘩”<br>“草你真了解我”<br>“了解你妹，你丫就是逗比”<br>。。。。</p>
-<p>杨老师是我的性启蒙老师，他谈过的每一个女友都近乎显摆的前来告诉我。<br>如今遇上了个菇凉好上了也有几年光景竟也没分开，说是不出一年就结婚。<br>可我每次都凑近前去告诉他我真心觉得杨老师应该找到更好的尽管眼前的这个已经很不错了。</p>
-<p>前一段她告诉我男友变成了前男友我当时就觉得该，真特么的该，早就该分了。<br>“哎你说你脑子进水了还是脑子有病”<br>“你不知道，当时我就特开心，因为她终于恢复了单身”<br>“关你屁事”<br>“可下一秒我就难过，失恋毕竟是件难过的事尽管我没经历过”<br>“你应该高兴才对毕竟人家离开了人渣”<br>“可恋爱这么久不可能没牵过人家的手亲过人家的嘴到后来还不是自己的男人”<br>。。。。。<br>好牛逼的感觉。。。。</p>
-<p>我会承诺的很多然后还要天真的履行即使很多许下的诺言别人都已记不起却烙在我心里。<br>我实现的很少可我却从没有放弃过也从未忘记也从未想过让别人知道。<br>我们会肩并肩的走着也会背对背的道别离开，我会去有她在城市看看那里的风景幻想她在的模样。<br>我会为她掉眼泪，每一滴我都觉得浪费还是不争气的落下来。<br>我会很高兴认识她这么久有过开心和不愉快，唯一庆幸的是我没有对她许过诺言。<br>诺言会成为累赘会海枯石烂要是实现不了还会撕心裂肺还会成为遗憾。<br>庆幸的是我答应的我都一一实现，也许多年以后回想起来瞬间自有答案。</p>
-<p>我知道自己喜欢她。<br>但我不知道自己将来在哪里。<br>因为我知道，无论哪里，她都不会带我去。<br>但我知道，无论我在哪里，只要她来我就去接她带她去好玩的地方看好看的风景吃好吃的东西。</p>
-<pre><code>                                                    写给南方
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/11/05/离言-1/" data-id="y5s70f5ur5av6n2p" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-离言" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/30/离言/" class="article-date">
-  <time datetime="2014-10-30T01:17:30.000Z" itemprop="datePublished">Oct 30 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/30/离言/">离言</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>穿好衣服梳洗打扮完自己，她背对着未未坐在床上面对着窗台看着窗外。<br>阳光明媚的近乎耽搁的迟迟未曾离去。<br>未未光着身子窝在被窝里看着她的背影，稍微弯曲染了色的头发在阳光的配村下显得格外的引人注目。<br>尤其还散发着沁人心脾的味道，未未好想上前从后边抱住她告诉她此刻的她是多么的迷人。<br>可是昨天晚上未未就和她在那张床上光着身子抱在一起滚来滚去折腾来折腾去。<br>全然不顾她是特意过来看他，要知道前几个时辰还在饭桌上恬静的吃着味道麻辣的鱼。<br>一整条鱼就在火炉山就着沸水冒着热气在暖黄色的灯光下扑面而来。<br>离言还特意把脸伸前让蒸汽吹在脸上说是可以美容。<br>回来的路上两人还断断续续的开着无伤大雅的说着不着调的朋友间的情话。<br>然而才不过几个时辰未未和离言就躺在一张床上光着身子任凭性欲肆虐。</p>
-<p>离言坐在床边一定很懊恼，尽管窗外阳光明媚到射进屋内落在白皙的床单上，未未心里想。<br>墙头边的床头柜上散落着摆放着快喝完的可乐以及头天夜晚倒进杯子里的白开水。<br>还有从饭店吃鱼打包带回来的黄豆，地上，摆放电视的桌子上也都散落着衣服，拖鞋，白色的袜子以及深色的内裤。<br>“你什么时候起来”离言转过身看着他，眼眶臃肿的还是能看到一丝丝的落寞。<br>“我现在就起来”未未僵硬的笑了笑准备起来才意识到自己光着身子。<br>“要不你转过身去”未未恢复平日里的羞涩不知所措，这次轮到离言笑出离声来。<br>穿起裤子未未就朝卫生间洗漱全身上下的给自己洗了一遍，并没有感觉到有多么的轻快。<br>相反看着镜子前的自己竟也不过如此的卑鄙，想想前天晚上发生的事情懊恼倒谈不上。<br>只是未未自己又一次对大树的信仰划上一道瑕疵而且要不以往<br>拿起白色的浴袍将上下随便擦了擦就走出来继续擦了擦头发。<br>离言三步作两步来到依旧安静的坐在床边的离言。<br>挑逗了下她的下巴弯下腰看着眼前的脸孔，几个小时之前还是无话不谈的朋友此刻却不知如何陈述。<br>“你在想什么呢”未未依旧如朋友般幸福的笑着看着眼前熟悉而又陌生的甚至可以说</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/30/离言/" data-id="xnx24sflvygn6syg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-便签纸上的爱情" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/21/便签纸上的爱情/" class="article-date">
-  <time datetime="2014-10-21T07:34:16.000Z" itemprop="datePublished">Oct 21 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/21/便签纸上的爱情/">便签纸上的爱情</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/21/便签纸上的爱情/" data-id="y80a4c2zs1p8n2va" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-龙哥" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/20/龙哥/" class="article-date">
-  <time datetime="2014-10-20T14:08:32.000Z" itemprop="datePublished">Oct 20 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>title: 申请合约<br>date: 2014-10-20 21:59:16</p>
-<h2 id="tags:龙哥">tags:龙哥</h2>
-<p>   易信惠普信息咨询有限公司与个人信用借款共用借款人就乙方向甲方提出申请，甲方向乙方公司提供借款信息咨询，协助办理相关手续等服务达成一致，签订如下条约，以兹信用。</p>
-<h4 id="第一条">第一条</h4>
-<p>一：甲方有权要求乙方提供申请借款所需的相关资料，乙方保证向甲方提供的所有申请资料真实，准确，完整，合法且有效。<br>二；尼玛的你就是扯淡。   </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/20/龙哥/" data-id="ui695ygglxe4k64l" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-C" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/06/C/" class="article-date">
-  <time datetime="2014-10-06T01:20:58.000Z" itemprop="datePublished">Oct 6 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/06/C/">C++</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 全局变量都是存放在静态存储区中的，因此他们的生存期是固定的，存在于程序的整个运行过程中。但是对全局变量来说，还有一个问题尚待解决就是它的作用域究竟是从什么位置起到什么位置结束，作用域是包括整个文件范围还是文件中的一部分范围，是在文件有效还是在程序中的所有的文件都有效，这就需要指定不同的 存储类别。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/06/C/" data-id="gu7ezai0a9uqjv5z" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全局变量/">全局变量</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-xiating" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/05/xiating/" class="article-date">
-  <time datetime="2014-10-05T09:05:02.000Z" itemprop="datePublished">Oct 5 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>title: xiating<br>date: 2014-10-05 17:00:00</p>
-<h2 id="tags:missing">tags:missing</h2>
-<p>一位过来人曾经带着一种酸溜溜的口气教导我们三：“你们以为那些优秀的男人是为你们准备的吗？不，那是为没有大脑的女人准备的。”为了表明我们是有大脑的女人，因此我们没有嫁出去。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/05/xiating/" data-id="wjwg497e68ydj2bw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-siwuxie" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/04/siwuxie/" class="article-date">
-  <time datetime="2014-10-04T04:29:23.000Z" itemprop="datePublished">Oct 4 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/04/siwuxie/">siwuxie</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>每到这个时候我就想在她屁股上狠狠捏一把，她柔嫩的让人惊异的肌肤更让人觉得这所有的鲜嫩都是用我的狼狈换来的，代价是我的面部水疗，我的香魂护理，我的一切只需要以自己的意愿为中心的生活，一不小心下手就重里。于是就会留下青紫的痕迹。其实小孩子用不着这么娇气的，这种小痕迹很快就会号，也不知道为什么西决怎么就把这点事看的那么重想的那么坏。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/04/siwuxie/" data-id="pqavyht47d1dzjyf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文艺范/">文艺范</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-test-post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/04/test-post/" class="article-date">
-  <time datetime="2014-10-04T04:25:41.000Z" itemprop="datePublished">Oct 4 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/04/test-post/">test-post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="hello">hello</h1>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">It</span> is just a demo.</div></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/04/test-post/" data-id="39691jhbsusu3hjf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/全局变量/">全局变量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文艺范/">文艺范</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/全局变量/" style="font-size: NaNpx;">全局变量</a><a href="/tags/文艺范/" style="font-size: NaNpx;">文艺范</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">8</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2014/11/08/demo/">Slider</a>
-          </li>
-        
-          <li>
-            <a href="/2014/11/05/写给南方/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2014/11/05/离言-1/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2014/10/30/离言/">离言</a>
-          </li>
-        
-          <li>
-            <a href="/2014/10/21/便签纸上的爱情/">便签纸上的爱情</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2014 qiudushu<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-
-<script src="/js/script.js" type="text/javascript"></script>
-
-
-  </div>
-</body>
+  </body>
 </html>
